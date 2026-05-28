@@ -1,9 +1,13 @@
-const header = document.querySelector(".header");
+const reveals = document.querySelectorAll(".reveal");
 
 window.addEventListener("scroll", () => {
-  if (window.scrollY > 80) {
-    header.classList.add("ativo");
-  } else {
-    header.classList.remove("ativo");
-  }
+  reveals.forEach((reveal) => {
+    const windowHeight = window.innerHeight;
+    const revealTop = reveal.getBoundingClientRect().top;
+    const revealPoint = 100;
+
+    if (revealTop < windowHeight - revealPoint) {
+      reveal.classList.add("active");
+    }
+  });
 });
