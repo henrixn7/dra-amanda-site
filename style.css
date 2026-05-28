@@ -20,12 +20,13 @@ body {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  background: rgba(251, 246, 239, 0.96);
-  backdrop-filter: blur(12px);
+  background: rgba(255, 255, 255, 0.72);
+  backdrop-filter: blur(14px);
   position: fixed;
   top: 0;
   z-index: 1000;
   box-shadow: 0 10px 35px rgba(80, 50, 30, 0.08);
+  border-bottom: 1px solid rgba(184, 137, 69, 0.10);
 }
 
 .logo {
@@ -114,12 +115,12 @@ body {
 }
 
 .hero {
-  min-height: 100vh;
+  min-height: 92vh;
   padding: 145px 6% 70px;
   display: grid;
-  grid-template-columns: 1.1fr 0.9fr;
+  grid-template-columns: 1fr 1fr;
   align-items: center;
-  gap: 50px;
+  gap: 55px;
   background:
     radial-gradient(circle at top right, rgba(184,137,69,0.18), transparent 35%),
     linear-gradient(90deg, #fbf6ef, #efe1d0);
@@ -136,7 +137,7 @@ body {
 
 .hero h1 {
   font-family: 'Cormorant Garamond', serif;
-  font-size: 68px;
+  font-size: 78px;
   line-height: 1;
   font-weight: 500;
   max-width: 760px;
@@ -247,10 +248,11 @@ footer p {
   text-align: left;
   box-shadow: 0 15px 45px rgba(70, 45, 25, 0.07);
   transition: 0.3s;
+  border: 1px solid rgba(184,137,69,0.08);
 }
 
 .card:hover {
-  transform: translateY(-8px);
+  transform: translateY(-10px) scale(1.01);
   box-shadow: 0 24px 60px rgba(70, 45, 25, 0.12);
 }
 
@@ -351,16 +353,26 @@ footer p {
 
 .whatsapp-fixo {
   position: fixed;
-  right: 24px;
-  bottom: 24px;
+  right: 22px;
+  bottom: 22px;
+  width: 68px;
+  height: 68px;
+  border-radius: 50%;
   background: #25d366;
-  color: white;
-  padding: 16px 22px;
-  border-radius: 50px;
-  text-decoration: none;
-  font-weight: 700;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   z-index: 999;
-  box-shadow: 0 14px 35px rgba(37, 211, 102, 0.35);
+  box-shadow: 0 15px 35px rgba(37,211,102,0.35);
+  transition: 0.3s;
+}
+
+.whatsapp-fixo:hover {
+  transform: scale(1.08);
+}
+
+.whatsapp-fixo img {
+  width: 34px;
 }
 
 @media (max-width: 1000px) {
@@ -376,7 +388,7 @@ footer p {
   }
 
   .hero h1 {
-    font-size: 48px;
+    font-size: 52px;
   }
 
   .hero-img img,
@@ -410,6 +422,10 @@ footer p {
     font-size: 12px;
   }
 
+  .logo p {
+    font-size: 9px;
+  }
+
   .hero {
     padding-top: 120px;
   }
@@ -434,5 +450,11 @@ footer p {
   .whatsapp-fixo {
     right: 16px;
     bottom: 16px;
+    width: 60px;
+    height: 60px;
+  }
+
+  .whatsapp-fixo img {
+    width: 30px;
   }
 }
