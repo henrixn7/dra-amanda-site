@@ -339,12 +339,13 @@ footer p {
 }
 
 footer {
-  padding: 70px 6%;
+  padding: 70px 6% 35px;
   background: linear-gradient(135deg, #2b201a, #3c2a22);
   color: white;
   display: flex;
   justify-content: space-between;
   gap: 40px;
+  flex-wrap: wrap;
 }
 
 footer p {
@@ -616,4 +617,27 @@ footer p {
     display: block;
   }
 
+}.assinatura-site {
+  width: 100%;
+  margin-top: 40px;
+  padding-top: 24px;
+  border-top: 1px solid rgba(255,255,255,0.10);
+  text-align: center;
+  color: rgba(255,255,255,0.55);
+  font-size: 13px;
+}
+
+.assinatura-site p {
+  margin-bottom: 6px;
+  color: rgba(255,255,255,0.55);
+}
+
+.assinatura-site a {
+  color: #d4a65f;
+  text-decoration: none;
+  font-weight: 700;
+}
+
+.assinatura-site a:hover {
+  color: white;
 }
